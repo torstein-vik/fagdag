@@ -12,6 +12,7 @@ $(function(){
 
     $("#setname > select").change(function(){
         setName($("#setname > select option:selected").html());
+        $("#setname > select option:disabled").prop('selected', true);
     });
 
     var name = localStorage.getItem('fagdagName');
@@ -48,13 +49,13 @@ function setWeekNum(week) {
 }
 
 function resolveOutput(){
-    $("h3#name").html(personname);
+    $("#name").html(personname);
 
     var date = getDateOfISOWeek((weeknum + 34) % 52, 2017);
 
     date.setDate(date.getDate() + 4);
 
-    $("span#date").html(date.toLocaleDateString("nb-NO", {weekday: 'long', month: 'long', day: 'numeric'}));
+    $("#date").html(date.toLocaleDateString("nb-NO", {weekday: 'long', month: 'long', day: 'numeric'}));
 
     if (weeknum >= 0 && weeknum < weekSpec.length) {
         var week = weekSpec[weeknum];
@@ -88,10 +89,10 @@ function resolveOutput(){
             alert("Systemfeil. Si det til Torstein.");
         }
 
-        $("div#subject").html(subject);
-        $("div#room")   .html(room);
+        $("#subject").html(subject);
+        $("#room")   .html(room);
     } else {
-        $("div#subject").html("Denne uken er ikke lagt til");
+        $("#subject").html("Denne uken er ikke lagt til");
     }
 }
 
