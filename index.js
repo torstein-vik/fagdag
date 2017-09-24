@@ -50,12 +50,17 @@ function setWeekNum(week) {
 function resolveOutput(){
     $("h3#name").html(personname);
 
+    var date = getDateOfISOWeek((weeknum + 34) % 52, 2017);
+
+    date.setDate(date.getDate() + 4);
+
+    $("span#date").html(date.toLocaleDateString("nb-NO", {weekday: 'long', month: 'long', day: 'numeric'}));
 
     if (weeknum >= 0 && weeknum < weekSpec.length) {
         var week = weekSpec[weeknum];
 
-        var subject;
-        var room;
+        var subject = "";
+        var room = "";
 
         if (week === 0){
             subject = "Ordinær timeplan";
@@ -96,4 +101,15 @@ function getWeekNumber(d) {
     var yearStart = new Date(Date.UTC(d.getUTCFullYear(),0,1));
     var weekNo = Math.ceil(( ( (d - yearStart) / 86400000) + 1)/7);
     return weekNo;
+}
+
+function getDateOfISOWeek(w, y) {
+    var simple = new Date(y, 0, 1 + (w - 1) * 7);
+    var dow = simple.getDay();
+    var ISOweekStart = simple;
+    if (dow <= 4)
+        ISOweekStart.setDate(simple.getDate() - simple.getDay() + 1);
+    else
+        ISOweekStart.setDate(simple.getDate() + 8 - simple.getDay());
+    return ISOweekStart;
 }
