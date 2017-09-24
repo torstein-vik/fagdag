@@ -12,6 +12,7 @@ var weekSpec = [
     'Skolevalgdebatt',
     6,
     2,
+    1,
     4,
     5,
     -1,
