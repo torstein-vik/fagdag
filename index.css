@@ -54,3 +54,46 @@ body {
     font-size: 100%;
     line-height: 2;
 }
+
+
+#output {
+    display: flex;
+    flex-direction: column;
+
+    width: 300px;
+}
+
+#output #title {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#output #title #h3 {
+    margin: 20px 0;
+
+}
+
+#date-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+#subject-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+#output #cancel {
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+#date {
+    margin: 20px 0;
+}
+
+#next, #prev {
+    cursor: pointer;
+    font-size: 200%;
+}
