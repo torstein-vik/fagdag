@@ -34,9 +34,9 @@
                 <h3 id="name"></h3>
                 <div id="subject"></div>
                 <div id="room"></div>
-                <span id="next"> &gt; </span>
+                <span id="prev" onclick="setWeekNummber(--weeknum); resolveOutput()"> &lt; </span>
                 <span id="date"></span>
-                <span id="prev"> &lt; </span>
+                <span id="next" onclick="setWeekNummber(++weeknum); resolveOutput()"> &gt; </span>
                 <a onclick="unsetName()"> 🗙 </a>
             </div>
         </div>
