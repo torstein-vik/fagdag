@@ -31,13 +31,19 @@
                 </select>
             </div>
             <div id="output" style="display: none">
-                <h3 id="name"></h3>
-                <div id="subject"></div>
-                <div id="room"></div>
-                <span id="prev" onclick="setWeekNum(--weeknum); resolveOutput()"> &lt; </span>
-                <span id="date"></span>
-                <span id="next" onclick="setWeekNum(++weeknum); resolveOutput()"> &gt; </span>
-                <a onclick="unsetName()"> 🗙 </a>
+                <div id="title">
+                    <h3 id="name"></h3>
+                    <a id="cancel" onclick="unsetName()"> 🗙 </a>
+                </div>
+                <div id="subject-container">
+                    <span id="subject"></span>
+                    <span id="room"></span>
+                </div>
+                <div id="date-container">
+                    <span id="prev" onclick="setWeekNum(--weeknum); resolveOutput()"> &lt; </span>
+                    <span id="date"></span>
+                    <span id="next" onclick="setWeekNum(++weeknum); resolveOutput()"> &gt; </span>
+                </div>
             </div>
         </div>
     </body>
