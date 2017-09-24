@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fagdag</title>
+        <meta charset="utf-8" />
+
+        <meta name="description" content="En nettside for 3ST3, Fagerlia VGS, som viser hvilken fagdag som er denne uken.">
+        <meta name="keywords" content="fagdag, 3ST3, Fagerlia VGS, Fagerlia, Fagerlia videregående skole, Torstein Vik, Vik">
+        <meta name="author" content="Torstein Vik">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1,maximum-scale=1, user-scalable=0">
+
+
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Oxygen"    rel="stylesheet" type="text/css">
+
+        <link rel="stylesheet" href="index.css"/>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="index.js"> </script>
+        <script src="data.js"> </script>
+
+    </head>
+    <body>
+        <h1> Fagdag 3ST3</h1>
+
+        <div id="maincontainer">
+            <div id="setname">
+                Vennligst velg person<br><br>
+                <select>
+                    <option selected disabled hidden> Venligst velg </option>
+                </select>
+            </div>
+            <div id="output" style="display: none">
+                <a onclick="unsetName()"> 🗙 </a>
+            </div>
+        </div>
+    </body>
+</html>
