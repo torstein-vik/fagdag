@@ -57,3 +57,5 @@ var personSpec = {
     'Steinar':  [['Biologi 2', 'A427'], 0, ['Tysk 1 + 2', 'A360'], ['Kjemi 2', 'A429, A431']]
 
 }
+
+var commonSpec = [['Norsk', '???'], ['RLE', 'B410']]
