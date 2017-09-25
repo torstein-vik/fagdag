@@ -1,8 +1,11 @@
 var weeknum;
 var personname = "";
 
+
 $(function(){
 
+
+    $("#output").hide();
 
     setWeekNum(getWeekNumber(new Date()) - 34);
 
