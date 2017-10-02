@@ -97,3 +97,19 @@ body {
     cursor: pointer;
     font-size: 200%;
 }
+
+#subject img {
+    display: none;
+}
+
+@media (min-height: 480px){
+
+    #subject img {
+        display: block;
+        position: absolute;
+        bottom: 10px;
+
+        width: 300px;
+    }
+
+}
