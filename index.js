@@ -54,7 +54,7 @@ function setWeekNum(week) {
 function resolveOutput(){
     $("#name").html(personname);
 
-    var date = getDateOfISOWeek((weeknum + 34) % 52, 2017);
+    var date = getDateOfISOWeek((weeknum + 34), 2017);
 
     date.setDate(date.getDate() + 4);
 
