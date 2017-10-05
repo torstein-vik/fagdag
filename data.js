@@ -42,7 +42,7 @@ var personSpec = {
     'Ruben':    [['Biologi 2', 'A427'], ['Matematikk S2', 'A509'], ['IT 2', 'A533'], 0],
     'Isak':     [0,0,['Samføk. 2', 'A526'], ['Pol. og menneskeret.', 'A509']],
     'Frida':    [['Matematikk S2', 'A527'], 0, ['Tysk 1 + 2', 'A360'], ['Kjemi 2', 'A429, A431']],
-    'Elida':    [['Rettslære 1', 'A533'], ['Rettslære 2', 'B410'], ['Eng. spr. litt. og kult.', 'A512']],
+    'Elida':    [['Rettslære 1', 'A533'], ['Rettslære 2', 'B410'], ['Eng. spr. litt. og kult.', 'A512'],0],
     'William':  [['Kjemi 2', 'A429, A431'], ['Matematikk R2', 'B339'], 0, 0],
     'Levi':     [0,['Matematikk R2', 'B339'], ['Psykologi 1', 'A527'], ['Fysikk 2', 'A439, A441']],
     'Kristian': [0,0,['Samføk. 2', 'A526'], ['Pol. og menneskeret.', 'A509']],
