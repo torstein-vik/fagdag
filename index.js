@@ -87,6 +87,21 @@ function resolveData(week) {
         return resolveNumber(week);
     }
     
+    if (typeof week === 'object') {
+        var d1 = resolveNumber(week[0]);
+        var d2 = resolveNumber(week[1]);
+        
+        if (d1[0] == 'Fri!!' && d2[0] == 'Fri!!'){
+            return d1;
+        } else if (d1[0] == 'Fri!!') {
+            return ["Fri til 10.55 & " + d2[0], d2[1]];
+        } else if (d2[0] == 'Fri!!') {
+            return [d1[0] + " & fri etter 10.30", d1[1]];
+        } else {
+            return [d1[0] + " & " + d2[0], d1[1] + " & " + d2[1]];
+        }
+    }
+    
     if (typeof week === 'string') {
         return [week, ""];
     }
