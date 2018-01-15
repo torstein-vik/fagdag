@@ -74,37 +74,40 @@ function resolveOutput(){
 }
 
 function resolveData(week) {
-    
-    var subject = "";
-    var room = "";
-    
+        
     if (week === 0){
-        subject = "Ordinær timeplan";
-    } else if (week === -1) {
-        subject = "FRI!";
-    } else if (typeof week === 'number' && week >= 1 && week <= 4){
+        return ["Ordinær timeplan", ""];
+    } 
+    
+    if (week === -1) {
+        return ['Fri!!', ""];
+    } 
+    
+    if (typeof week === 'number' && week >= 1 && week <= 4){
         var data = personSpec[personname][week - 1];
         if (data == 0) {
-            subject = "FRI!";
+            return ['Fri!!', ""];
         } else {
-            subject = data[0];
-            room    = data[1];
+            return data;
         }
-    } else if (typeof week === 'number' && week >= 5 && week <= 6){
+    } 
+    
+    if (typeof week === 'number' && week >= 5 && week <= 6){
         var data = commonSpec[week - 5];
         if (data == 0) {
-            subject = "FRI!";
+            return ['Fri!!', ""];
         } else {
-            subject = data[0];
-            room    = data[1];
+            return data;
         }
-    } else if (typeof week === 'string') {
-        subject = week;
-    } else {
-        alert("Systemfeil. Si det til Torstein.");
+    } 
+    
+    if (typeof week === 'string') {
+        return [week, ""];
     }
     
-    return [subject, room];
+    alert("Systemfeil. Si det til Torstein.");
+    return ["", ""];
+    
 }
 
 function getWeekNumber(d) {
