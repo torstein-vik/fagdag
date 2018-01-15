@@ -69,11 +69,11 @@ function resolveOutput(){
         if (week === 0){
             subject = "Ordinær timeplan";
         } else if (week === -1) {
-            subject = "FRI! <img src='https://cdn.fbsbx.com/v/t59.2708-21/21742670_2095412270484868_2393354780345892864_n.gif?oh=840ad09608c9507db19af15ba367165f&oe=59D49F6B'>";
+            subject = "FRI!";
         } else if (typeof week === 'number' && week >= 1 && week <= 4){
             var data = personSpec[personname][week - 1];
             if (data == 0) {
-                subject = "FRI! <img src='https://cdn.fbsbx.com/v/t59.2708-21/21742670_2095412270484868_2393354780345892864_n.gif?oh=840ad09608c9507db19af15ba367165f&oe=59D49F6B'>";
+                subject = "FRI!";
             } else {
                 subject = data[0];
                 room    = data[1];
@@ -81,7 +81,7 @@ function resolveOutput(){
         } else if (typeof week === 'number' && week >= 5 && week <= 6){
             var data = commonSpec[week - 5];
             if (data == 0) {
-                subject = "FRI! <img src='https://cdn.fbsbx.com/v/t59.2708-21/21742670_2095412270484868_2393354780345892864_n.gif?oh=840ad09608c9507db19af15ba367165f&oe=59D49F6B'>";
+                subject = "FRI!";
             } else {
                 subject = data[0];
                 room    = data[1];
