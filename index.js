@@ -63,9 +63,11 @@ function resolveOutput(){
     if (weeknum >= 0 && weeknum < weekSpec.length) {
         var week = weekSpec[weeknum];
 
+        var data = resolveData(week);
+        
 
-        $("#subject").html(subject);
-        $("#room")   .html(room);
+        $("#subject").html(data[0]);
+        $("#room")   .html(data[1]);
     } else {
         $("#subject").html("Denne uken er ikke lagt til");
     }
