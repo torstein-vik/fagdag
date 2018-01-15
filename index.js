@@ -83,23 +83,11 @@ function resolveData(week) {
         return ['Fri!!', ""];
     } 
     
-    if (typeof week === 'number' && week >= 1 && week <= 4){
-        var data = personSpec[personname][week - 1];
-        if (data == 0) {
-            return ['Fri!!', ""];
-        } else {
-            return data;
-        }
-    } 
+    if (typeof week === 'number') {
+        return resolveNumber(week);
+    }
     
-    if (typeof week === 'number' && week >= 5 && week <= 6){
-        var data = commonSpec[week - 5];
-        if (data == 0) {
-            return ['Fri!!', ""];
-        } else {
-            return data;
         }
-    } 
     
     if (typeof week === 'string') {
         return [week, ""];
@@ -108,6 +96,21 @@ function resolveData(week) {
     alert("Systemfeil. Si det til Torstein.");
     return ["", ""];
     
+}
+
+function resolveNumber(week) {
+    
+    if (week >= 1 && week <= 4){
+        var data = personSpec[personname][week - 1];
+    } else {
+        var data = commonSpec[week - 5];
+    } 
+    
+    if (data == 0) {
+        return ['Fri!!', ""];
+    } else {
+        return data;
+    }
 }
 
 function getWeekNumber(d) {
