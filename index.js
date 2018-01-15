@@ -87,8 +87,6 @@ function resolveData(week) {
         return resolveNumber(week);
     }
     
-        }
-    
     if (typeof week === 'string') {
         return [week, ""];
     }
