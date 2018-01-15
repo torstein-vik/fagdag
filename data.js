@@ -4,6 +4,7 @@
 -1 is vacation,
 1-6 are the specific subjects,
 text is something else
+tuple is split day
 
 */
 
@@ -31,7 +32,27 @@ var weekSpec = [
     1,
     4,
     5,
-    3
+    3,
+    2, 
+    1, 
+    -1, 
+    4, 
+    6, 
+    0,
+    5,
+    -1,
+    3,
+    [4, 5],
+    [2, 3],
+    [1, 6],
+    'Studiedag',
+    -1,
+    -1,
+    'Eksamen: Norsk hovedmål',
+    'POM',
+    'Fagfestival',
+    'Fagfestival',
+    'Sommerferie!'
 ]
 
 
